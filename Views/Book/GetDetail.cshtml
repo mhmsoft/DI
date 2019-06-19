@@ -1,0 +1,50 @@
+﻿@model Dependecy_Injection.Models.Book
+
+@{
+    ViewBag.Title = "GetDetail";
+}
+
+<h2>GetDetail</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.bookName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bookName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.releasedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.releasedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.bookId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -30,5 +30,23 @@ namespace Dependecy_Injection.Controllers
                 repository.Add(book);
             return RedirectToAction("Index");
         }
+        public ActionResult GetDetail(int id)
+        {
+            return View(repository.Get(id));
+        }
+        public ActionResult Delete(int id)
+        {
+            return View(repository.Get(id));
+        }
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteBook(int id)
+        {
+            Book book = repository.Get(id);
+            repository.Delete(book);
+            return RedirectToAction("Index");
+        }
+
+
     }
 }
